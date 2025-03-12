@@ -190,7 +190,181 @@
             </div>
         </main>
 
-        <!-- Copy footer from index.html -->
+    <!-- Footer -->
+    <footer id="footer" class="bg-[#046A38] text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">GCBA</h3>
+                    <p class="text-sm opacity-80">Building Character Through Sport</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about/visionMission.html" class="hover:text-[#FFB71C] transition cursor-pointer">About Us</a></li>
+                        <li><a href="/volunteers.html" class="hover:text-[#FFB71C] transition cursor-pointer">Volunteers</a></li>
+                        <li><a href="/contactus.html" class="hover:text-[#FFB71C] transition cursor-pointer">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/gcbawolverines/" class="hover:text-[#FFB71C] transition">
+                            <i class="fa-brands fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/GCBAWolverines" class="hover:text-[#FFB71C] transition">
+                            <i class="fa-brands fa-facebook text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <p class="text-sm opacity-80">Orleans, Ontario</p>
+                    <p class="text-sm opacity-80">info@gcba.com</p>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-20 mt-8 pt-8 text-center text-sm opacity-80">
+                <p>&copy; 2025 Gloucester Cumberland Basketball Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!-- Mobile Menu (hidden by default) -->
+<div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+    <div class="bg-white h-full w-4/5 max-w-sm overflow-y-auto transform transition-transform duration-300 translate-x-0">
+        <div class="flex justify-between items-center p-4 border-b">
+            <img src="/images/GCBA-Logo.png" alt="GCBA Logo" class="h-12">
+            <button id="closeMenuBtn" class="text-gray-600">
+                <i class="fa-solid fa-times text-2xl"></i>
+            </button>
+        </div>
+        
+        <nav class="p-4">
+            <!-- Mobile Programs Menu -->
+            <div class="mb-4">
+                <button class="mobile-dropdown-toggle flex justify-between items-center w-full py-2 text-left text-gray-800">
+                    <span>Programs</span>
+                    <i class="fa-solid fa-chevron-down transform transition-transform"></i>
+                </button>
+                <div class="mobile-dropdown-content hidden pl-4 mt-1 space-y-2 border-l-2 border-gray-200">
+                    <a href="/programs/jrNba.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Jr. NBA</a>
+                    <a href="/programs/houseLeague.html" class="block py-2 text-gray-600 hover:text-[#046A38]">House League</a>
+                    <a href="/programs/competitive.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Competitive</a>
+                    <a href="/programs/refereeProgram.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Referee Program</a>
+                    <a href="/programs/selects.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Selects</a>
+                    <a href="/programs/capitalCourtsBoys.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Capital Courts Boys</a>
+                    <a href="/programs/springLeague.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Spring League</a>
+                    <a href="/programs/girlsParkProgram.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Girls' Park Program</a>
+                    <div class="py-2 text-gray-700 font-semibold">Summer Programs</div>
+                    <a href="/programs/summer3v3.html" class="block py-2 pl-2 text-gray-600 hover:text-[#046A38]">3v3</a>
+                    <a href="/programs/summerTraining.html" class="block py-2 pl-2 text-gray-600 hover:text-[#046A38]">Training</a>
+                    <a href="/programs/summerCamps.html" class="block py-2 pl-2 text-gray-600 hover:text-[#046A38]">Camps</a>
+                </div>
+            </div>
+            
+            <!-- Mobile About Us Menu -->
+            <div class="mb-4">
+                <button class="mobile-dropdown-toggle flex justify-between items-center w-full py-2 text-left text-gray-800">
+                    <span>About Us</span>
+                    <i class="fa-solid fa-chevron-down transform transition-transform"></i>
+                </button>
+                <div class="mobile-dropdown-content hidden pl-4 mt-1 space-y-2 border-l-2 border-gray-200">
+                    <a href="/about/visionMission.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Vision & Mission</a>
+                    <a href="/about/clubHistory.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Club History</a>
+                    <a href="/about/executiveDirectors.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Executive & Directors</a>
+                    <a href="/about/policiesProcedures.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Policies & Procedures</a>
+                    <a href="/about/annualGeneralMeeting.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Annual General Meeting</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Resources Menu -->
+            <div class="mb-4">
+                <button class="mobile-dropdown-toggle flex justify-between items-center w-full py-2 text-left text-gray-800">
+                    <span>Resources</span>
+                    <i class="fa-solid fa-chevron-down transform transition-transform"></i>
+                </button>
+                <div class="mobile-dropdown-content hidden pl-4 mt-1 space-y-2 border-l-2 border-gray-200">
+                    <a href="/resources/coachesCorner.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Coaches' Corner</a>
+                    <a href="/resources/competitiveResources.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Competitive Resources</a>
+                    <a href="/resources/houseLeagueResources.html" class="block py-2 text-gray-600 hover:text-[#046A38]">House League Resources</a>
+                </div>
+            </div>
+            
+            <a href="/shop" class="block py-2 text-gray-800 hover:text-[#046A38]">Shop</a>
+            <a href="/volunteers.html" class="block py-2 text-gray-800 hover:text-[#046A38]">Volunteers</a>
+            <a href="/contactus.html" class="block py-2 text-gray-800 hover:text-[#046A38]">Contact Us</a>
+            
+            <div class="mt-6">
+                <a href="#" class="block w-full bg-[#FFB71C] text-[#174634] px-6 py-2 rounded-full font-bold text-center hover:bg-opacity-90 transition">
+                    Register
+                </a>
+            </div>
+        </nav>
     </div>
+</div>
+
+<!-- Add this JavaScript at the end of the body -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Only add listener if the element exists
+    const showMoreBtn = document.getElementById('showMorePrograms');
+    if (showMoreBtn) {
+        const moreArrow = document.getElementById('moreArrow');
+        const additionalPrograms = document.getElementById('additionalPrograms');
+
+        showMoreBtn.addEventListener('click', function() {
+            if (additionalPrograms.classList.contains('hidden')) {
+                additionalPrograms.classList.remove('hidden');
+                moreArrow.classList.add('rotate-180');
+                showMoreBtn.querySelector('span').textContent = 'Less Programs';
+            } else {
+                additionalPrograms.classList.add('hidden');
+                moreArrow.classList.remove('rotate-180');
+                showMoreBtn.querySelector('span').textContent = 'More Programs';
+            }
+        });
+    }
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden'); // Prevent scrolling when menu is open
+    });
+
+    closeMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+    });
+
+    // Close menu if clicking outside content area
+    mobileMenu.addEventListener('click', function(e) {
+        if (e.target === mobileMenu) {
+            mobileMenu.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+    });
+
+    // Mobile Dropdown Toggles
+    const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            const content = this.nextElementSibling;
+            const icon = this.querySelector('i');
+            content.classList.toggle('hidden');
+            if (content.classList.contains('hidden')) {
+                icon.classList.remove('rotate-180');
+            } else {
+                icon.classList.add('rotate-180');
+            }
+        });
+    });
+});
+</script>
 </body>
-</html> 
+</html>
+          

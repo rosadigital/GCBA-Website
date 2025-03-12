@@ -367,7 +367,7 @@
 <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
     <div class="bg-white h-full w-4/5 max-w-sm overflow-y-auto transform transition-transform duration-300 translate-x-0">
         <div class="flex justify-between items-center p-4 border-b">
-            <img src="frontend/images/GCBA-Logo.png" alt="GCBA Logo" class="h-12">
+            <img src="/images/GCBA-Logo.png" alt="GCBA Logo" class="h-12">
             <button id="closeMenuBtn" class="text-gray-600">
                 <i class="fa-solid fa-times text-2xl"></i>
             </button>
@@ -439,13 +439,14 @@
 
 <!-- Add this JavaScript at the end of the body -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const showMoreBtn = document.getElementById('showMorePrograms');
+document.addEventListener('DOMContentLoaded', function() {
+    // Only add listener if the element exists
+    const showMoreBtn = document.getElementById('showMorePrograms');
+    if (showMoreBtn) {
         const moreArrow = document.getElementById('moreArrow');
         const additionalPrograms = document.getElementById('additionalPrograms');
-        
+
         showMoreBtn.addEventListener('click', function() {
-            // Toggle visibility of additional programs
             if (additionalPrograms.classList.contains('hidden')) {
                 additionalPrograms.classList.remove('hidden');
                 moreArrow.classList.add('rotate-180');
@@ -456,50 +457,46 @@
                 showMoreBtn.querySelector('span').textContent = 'More Programs';
             }
         });
-        
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const closeMenuBtn = document.getElementById('closeMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        
-        mobileMenuBtn.addEventListener('click', function() {
-            mobileMenu.classList.remove('hidden');
-            document.body.classList.add('overflow-hidden'); // Prevent scrolling when menu is open
-        });
-        
-        closeMenuBtn.addEventListener('click', function() {
+    }
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden'); // Prevent scrolling when menu is open
+    });
+
+    closeMenuBtn.addEventListener('click', function() {
+        mobileMenu.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+    });
+
+    // Close menu if clicking outside content area
+    mobileMenu.addEventListener('click', function(e) {
+        if (e.target === mobileMenu) {
             mobileMenu.classList.add('hidden');
             document.body.classList.remove('overflow-hidden');
-        });
-        
-        // Close menu if clicking outside content area
-        mobileMenu.addEventListener('click', function(e) {
-            if (e.target === mobileMenu) {
-                mobileMenu.classList.add('hidden');
-                document.body.classList.remove('overflow-hidden');
+        }
+    });
+
+    // Mobile Dropdown Toggles
+    const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function() {
+            const content = this.nextElementSibling;
+            const icon = this.querySelector('i');
+            content.classList.toggle('hidden');
+            if (content.classList.contains('hidden')) {
+                icon.classList.remove('rotate-180');
+            } else {
+                icon.classList.add('rotate-180');
             }
         });
-        
-        // Mobile Dropdown Toggles
-        const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
-        
-        dropdownToggles.forEach(toggle => {
-            toggle.addEventListener('click', function() {
-                const content = this.nextElementSibling;
-                const icon = this.querySelector('i');
-                
-                // Toggle dropdown visibility
-                content.classList.toggle('hidden');
-                
-                // Toggle icon rotation
-                if (content.classList.contains('hidden')) {
-                    icon.classList.remove('rotate-180');
-                } else {
-                    icon.classList.add('rotate-180');
-                }
-            });
-        });
     });
+});
 </script>
 </body>
 </html>
