@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html class="h-full">
+<head>
+    <title>Executive & Directors - GCBA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        window.FontAwesomeConfig = {
+            autoReplaceSvg: 'nest',
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>
+        * {
+            font-family: "Inter", sans-serif;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .nav-dropdown {
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+        }
+
+        .nav-group:hover .nav-dropdown,
+        .nav-dropdown:hover {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="h-full text-base-content">
+    <div id="root" class="min-h-screen bg-white">
+        <!-- Header -->
+        <header id="header" class="fixed w-full bg-[#046A38] text-white z-50">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between h-20">
+                    <div class="flex items-center">
+                        <a href="/index.html">
+                            <img src="/images/GCBA-Logo.png" alt="GCBA Logo" class="h-16 cursor-pointer">
+                        </a>
+                    </div>
+                    
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden md:flex space-x-6">
+                        <a href="/index.html" class="hover:text-[#FFB71C] transition cursor-pointer">Home</a>
+                        <div class="relative group nav-group">
+                            <span class="hover:text-[#FFB71C] transition cursor-pointer">About Us</span>
+                            <div class="absolute nav-dropdown w-48 bg-white shadow-lg rounded-lg mt-2">
+                                <a href="/about/visionMission.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Vision & Mission</a>
+                                <a href="/about/clubHistory.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Club History</a>
+                                <a href="/about/executiveDirectors.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Executive & Directors</a>
+                                <a href="/about/policiesProcedures.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Policies & Procedures</a>
+                                <a href="/about/annualGeneralMeeting.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Annual General Meeting</a>
+                            </div>
+                        </div>
+                        <div class="relative group nav-group">
+                            <span class="hover:text-[#FFB71C] transition cursor-pointer">Programs</span>
+                            <div class="absolute nav-dropdown w-64 bg-white shadow-lg rounded-lg mt-2">
+                                <a href="/programs/jrNba.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Jr. NBA</a>
+                                <a href="/programs/houseLeague.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">House League</a>
+                                <a href="/programs/competitive.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Competitive</a>
+                                <a href="/programs/refereeProgram.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Referee Program</a>
+                                <a href="/programs/selects.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Selects</a>
+                                <a href="/programs/capitalCourtsBoys.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Capital Courts Boys</a>
+                                <a href="/programs/springLeague.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Spring League</a>
+                                <a href="/programs/girlsParkProgram.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Girls' Park Program</a>
+                                <div class="px-4 py-2 text-gray-600 font-semibold bg-gray-50">Summer Programs</div>
+                                <a href="/programs/summer3v3.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">3v3</a>
+                                <a href="/programs/summerTraining.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">Training</a>
+                                <a href="/programs/summerCamps.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">Camps</a>
+                            </div>
+                        </div>
+                        <div class="relative group nav-group">
+                            <span class="hover:text-[#FFB71C] transition cursor-pointer">Resources</span>
+                            <div class="absolute nav-dropdown w-48 bg-white shadow-lg rounded-lg mt-2">
+                                <a href="/resources/coachesCorner.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Coaches' Corner</a>
+                                <a href="/resources/competitiveResources.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Competitive Resources</a>
+                                <a href="/resources/houseLeagueResources.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">House League Resources</a>
+                            </div>
+                        </div>
+                        <a href="https://gcbawolverines.entripyshops.com/" target="_blank" class="hover:text-[#FFB71C] transition cursor-pointer">Shop</a>
+                        <a href="/volunteers.html" class="hover:text-[#FFB71C] transition cursor-pointer">Volunteers</a>
+                        <a href="/contactus.html" class="hover:text-[#FFB71C] transition cursor-pointer">Contact Us</a>
+                    </nav>
+                    
+                    <a href="https://gcba.powerupsports.com/" target="_blank" class="hidden md:block bg-[#FFB71C] text-[#174634] px-6 py-2 rounded-full font-bold hover:bg-opacity-90 transition">
+                        Register
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="md:hidden text-white">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="pt-32 pb-20">
+            <div class="container mx-auto px-4">
+                <!-- Hero Section -->
+                <div class="text-center mb-16">
+                    <h1 class="text-5xl font-bold text-[#174634] mb-6">
+                        <i class="fa-solid fa-users text-[#FFB71C] mr-2"></i>
+                        Executive & Directors
+                    </h1>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Meet the leadership team dedicated to the growth and development of basketball in our community.
+                    </p>
+                </div>
+
+                <!-- Executive Team Section -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+                    <h2 class="text-3xl text-[#174634] mb-8">Executive Committee</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- President -->
+                        <div class="bg-gray-50 rounded-lg overflow-hidden">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-[#174634] mb-1">Sarah Johnson</h3>
+                                <p class="text-[#046A38] font-medium mb-4">President</p>
+                                <p class="text-gray-600 text-sm mb-4">Sarah has been involved with GCBA for 15 years, first as a parent, then coach, and board member. She brings executive leadership experience from her professional background in community development.</p>
+                                <a href="mailto:president@gcba.com" class="text-[#046A38] hover:text-[#FFB71C] transition inline-flex items-center">
+                                    <i class="fa-solid fa-envelope mr-2"></i>
+                                    <span>president@gcba.com</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Vice President -->
+                        <div class="bg-gray-50 rounded-lg overflow-hidden">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-[#174634] mb-1">Michael Chen</h3>
+                                <p class="text-[#046A38] font-medium mb-4">Vice President</p>
+                                <p class="text-gray-600 text-sm mb-4">Michael is a former university basketball player and has been coaching with GCBA for 8 years. He oversees program development and special initiatives.</p>
+                                <a href="mailto:vicepresident@gcba.com" class="text-[#046A38] hover:text-[#FFB71C] transition inline-flex items-center">
+                                    <i class="fa-solid fa-envelope mr-2"></i>
+                                    <span>vicepresident@gcba.com</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Treasurer -->
+                        <div class="bg-gray-50 rounded-lg overflow-hidden">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-[#174634] mb-1">David Wilson</h3>
+                                <p class="text-[#046A38] font-medium mb-4">Treasurer</p>
+                                <p class="text-gray-600 text-sm mb-4">David brings his professional expertise as an accountant to manage GCBA's finances, ensuring responsible stewardship of resources and financial sustainability.</p>
+                                <a href="mailto:treasurer@gcba.com" class="text-[#046A38] hover:text-[#FFB71C] transition inline-flex items-center">
+                                    <i class="fa-solid fa-envelope mr-2"></i>
+                                    <span>treasurer@gcba.com</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Secretary -->
+                        <div class="bg-gray-50 rounded-lg overflow-hidden">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-[#174634] mb-1">Emily Rodriguez</h3>
+                                <p class="text-[#046A38] font-medium mb-4">Secretary</p>
+                                <p class="text-gray-600 text-sm mb-4">Emily has been with GCBA for 5 years and manages board documentation, communications, and administration to keep the organization running smoothly.</p>
+                                <a href="mailto:secretary@gcba.com" class="text-[#046A38] hover:text-[#FFB71C] transition inline-flex items-center">
+                                    <i class="fa-solid fa-envelope mr-2"></i>
+                                    <span>secretary@gcba.com</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Directors Section -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+                    <h2 class="text-3xl text-[#174634] mb-8">Program Directors</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- House League Director -->
+                        <div class="bg-gray-50 rounded-lg overflow-hidden">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-[#174634] mb-1">Jennifer Williams</h3>
+                                <p class="text-[#046A38] font-medium mb-4">House League Director</p>
+                                <p class="text-gray-600 text-sm mb-4">Jennifer oversees the recreational basketball program, coordinating teams, schedules, and ensuring a positive experience for all participants.</p>
+                                <a href="mailto:houseleague@gcba.com" class="text-[#046A38] hover:text-[#FFB71C] transition inline-flex items-center">
+                                    <i class="fa-solid fa-envelope mr-2"></i>
+                                    <span>houseleague@gcba.com</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Competitive Director -->
+                        <div class="bg-gray-50 rounded-lg overflow-hidden">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-[#174634] mb-1">Marcus Thompson</h3>
+                                <p class="text-[#046A38] font-medium mb-4">Competitive Director</p>
+                                <p class="text-gray-600 text-sm mb-4">Marcus leads our competitive program, managing tryouts, team formation, tournament participation, and competitive development.</p>
+                                <a href="mailto:competitive@gcba.com" class="text-[#046A38] hover:text-[#FFB71C] transition inline-flex items-center">
+                                    <i class="fa-solid fa-envelope mr-2"></i>
+                                    <span>competitive@gcba.com</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Jr. NBA Director -->
+                        <div class="bg-gray-50 rounded-lg overflow-hidden">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-[#174634] mb-1">Lisa Patel</h3>
+                                <p class="text-[#046A38] font-medium mb-4">Jr. NBA Director</p>
+                                <p class="text-gray-600 text-sm mb-4">Lisa manages our youngest player development program, ensuring age-appropriate instruction and creating first positive basketball experiences.</p>
+                                <a href="mailto:jrnba@gcba.com" class="text-[#046A38] hover:text-[#FFB71C] transition inline-flex items-center">
+                                    <i class="fa-solid fa-envelope mr-2"></i>
+                                    <span>jrnba@gcba.com</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Referee Development Director -->
+                        <div class="bg-gray-50 rounded-lg overflow-hidden">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-[#174634] mb-1">Robert Taylor</h3>
+                                <p class="text-[#046A38] font-medium mb-4">Referee Development Director</p>
+                                <p class="text-gray-600 text-sm mb-4">Robert coordinates referee recruitment, training, and scheduling, helping develop the next generation of basketball officials.</p>
+                                <a href="mailto:referees@gcba.com" class="text-[#046A38] hover:text-[#FFB71C] transition inline-flex items-center">
+                                    <i class="fa-solid fa-envelope mr-2"></i>
+                                    <span>referees@gcba.com</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Coach Development Director -->
+                        <div class="bg-gray-50 rounded-lg overflow-hidden">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-[#174634] mb-1">James Anderson</h3>
+                                <p class="text-[#046A38] font-medium mb-4">Coach Development Director</p>
+                                <p class="text-gray-600 text-sm mb-4">James leads coach recruitment, training, and support, helping volunteers become effective and confident basketball coaches.</p>
+                                <a href="mailto:coaching@gcba.com" class="text-[#046A38] hover:text-[#FFB71C] transition inline-flex items-center">
+                                    <i class="fa-solid fa-envelope mr-2"></i>
+                                    <span>coaching@gcba.com</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Join Us CTA -->
+                <div class="text-center bg-[#174634] rounded-xl p-12">
+                    <h2 class="text-3xl text-white mb-6">Join Our Leadership Team</h2>
+                    <p class="text-gray-300 mb-8">GCBA is always looking for passionate volunteers to help lead our organization. We have various board and committee positions that become available throughout the year.</p>
+                    <div class="flex flex-col md:flex-row justify-center gap-6">
+                        <a href="/volunteers.html" class="bg-[#FFB71C] text-[#174634] px-8 py-3 rounded-full hover:bg-opacity-90 transition inline-flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-hands-helping"></i>
+                            <span>Volunteer Opportunities</span>
+                        </a>
+                        <a href="/contactus.html" class="text-white hover:text-[#FFB71C] transition inline-flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Contact Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-[#046A38] text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">GCBA</h3>
+                    <p class="text-sm opacity-80">Building Character Through Sport</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about/visionMission.html" class="hover:text-[#FFB71C] transition cursor-pointer">About Us</a></li>
+                        <li><a href="/volunteers.html" class="hover:text-[#FFB71C] transition cursor-pointer">Volunteers</a></li>
+                        <li><a href="/contactus.html" class="hover:text-[#FFB71C] transition cursor-pointer">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/gcbawolverines/" class="hover:text-[#FFB71C] transition">
+                            <i class="fa-brands fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/GCBAWolverines" class="hover:text-[#FFB71C] transition">
+                            <i class="fa-brands fa-facebook text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <p class="text-sm opacity-80">Orleans, Ontario</p>
+                    <p class="text-sm opacity-80">info@gcba.com</p>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-20 mt-8 pt-8 text-center text-sm opacity-80">
+                <p>&copy; 2025 Gloucester Cumberland Basketball Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+</html> 

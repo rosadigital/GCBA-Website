@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html class="h-full">
+<head>
+    <title>Capital Courts Boys - GCBA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        window.FontAwesomeConfig = {
+            autoReplaceSvg: 'nest',
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>
+        * {
+            font-family: "Inter", sans-serif;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .nav-dropdown {
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+        }
+
+        .nav-group:hover .nav-dropdown,
+        .nav-dropdown:hover {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="h-full text-base-content">
+    <div id="root" class="min-h-screen bg-white">
+        <!-- Header -->
+        <header id="header" class="fixed w-full bg-[#046A38] text-white z-50">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between h-20">
+                    <div class="flex items-center">
+                        <a href="/index.html">
+                            <img src="/images/GCBA-Logo.png" alt="GCBA Logo" class="h-16 cursor-pointer">
+                        </a>
+                    </div>
+                    
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden md:flex space-x-6">
+                        <a href="/index.html" class="hover:text-[#FFB71C] transition cursor-pointer">Home</a>
+                        <div class="relative group nav-group">
+                            <span class="hover:text-[#FFB71C] transition cursor-pointer">About Us</span>
+                            <div class="absolute nav-dropdown w-48 bg-white shadow-lg rounded-lg mt-2">
+                                <a href="/about/visionMission.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Vision & Mission</a>
+                                <a href="/about/clubHistory.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Club History</a>
+                                <a href="/about/executiveDirectors.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Executive & Directors</a>
+                                <a href="/about/policiesProcedures.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Policies & Procedures</a>
+                                <a href="/about/annualGeneralMeeting.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Annual General Meeting</a>
+                            </div>
+                        </div>
+                        <div class="relative group nav-group">
+                            <span class="hover:text-[#FFB71C] transition cursor-pointer">Programs</span>
+                            <div class="absolute nav-dropdown w-64 bg-white shadow-lg rounded-lg mt-2">
+                                <a href="/programs/jrNba.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Jr. NBA</a>
+                                <a href="/programs/houseLeague.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">House League</a>
+                                <a href="/programs/competitive.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Competitive</a>
+                                <a href="/programs/refereeProgram.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Referee Program</a>
+                                <a href="/programs/selects.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Selects</a>
+                                <a href="/programs/capitalCourtsBoys.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Capital Courts Boys</a>
+                                <a href="/programs/springLeague.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Spring League</a>
+                                <a href="/programs/girlsParkProgram.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Girls' Park Program</a>
+                                <div class="px-4 py-2 text-gray-600 font-semibold bg-gray-50">Summer Programs</div>
+                                <a href="/programs/summer3v3.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">3v3</a>
+                                <a href="/programs/summerTraining.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">Training</a>
+                                <a href="/programs/summerCamps.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">Camps</a>
+                            </div>
+                        </div>
+                        <div class="relative group nav-group">
+                            <span class="hover:text-[#FFB71C] transition cursor-pointer">Resources</span>
+                            <div class="absolute nav-dropdown w-48 bg-white shadow-lg rounded-lg mt-2">
+                                <a href="/resources/coachesCorner.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Coaches' Corner</a>
+                                <a href="/resources/competitiveResources.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Competitive Resources</a>
+                                <a href="/resources/houseLeagueResources.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">House League Resources</a>
+                            </div>
+                        </div>
+                        <a href="https://gcbawolverines.entripyshops.com/" target="_blank" class="hover:text-[#FFB71C] transition cursor-pointer">Shop</a>
+                        <a href="/volunteers.html" class="hover:text-[#FFB71C] transition cursor-pointer">Volunteers</a>
+                        <a href="/contactus.html" class="hover:text-[#FFB71C] transition cursor-pointer">Contact Us</a>
+                    </nav>
+                    
+                    <a href="https://gcba.powerupsports.com/" target="_blank" class="hidden md:block bg-[#FFB71C] text-[#174634] px-6 py-2 rounded-full font-bold hover:bg-opacity-90 transition">
+                        Register
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="md:hidden text-white">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="pt-32 pb-20">
+            <div class="container mx-auto px-4">
+                <!-- Hero Section -->
+                <div class="text-center mb-16">
+                    <h1 class="text-5xl font-bold text-[#174634] mb-6">
+                        <i class="fa-solid fa-crown text-[#FFB71C] mr-2"></i>
+                        Capital Courts Boys
+                    </h1>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Elite development program for talented boys looking to excel in basketball.
+                    </p>
+                </div>
+
+                <!-- Program Overview -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-2/3">
+                            <h2 class="text-3xl text-[#174634] mb-6">Program Overview</h2>
+                            <div class="prose text-gray-600">
+                                <p class="mb-4">The Capital Courts Boys program is designed to develop high-potential male basketball players through advanced training, expert coaching, and competitive play opportunities.</p>
+                                
+                                <div class="space-y-4 mt-8">
+                                    <div class="flex items-start gap-3">
+                                        <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
+                                        <p>Elite Training – Professional-level skill development</p>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
+                                        <p>Expert Coaching – Learn from experienced coaches</p>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
+                                        <p>Exposure Opportunities – Showcase events for college/university scouts</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/3">
+                            <img class="rounded-xl shadow-lg w-full h-[300px] object-cover" 
+                                 src="/images/capital-courts.png" 
+                                 alt="Capital Courts Boys training session">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Program Benefits -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+                    <h2 class="text-2xl text-[#174634] mb-6">Program Benefits</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="p-6 bg-gray-50 rounded-lg">
+                            <h3 class="font-bold text-[#046A38] mb-3">Skill Development</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>Position-Specific Training</li>
+                                <li>Advanced Techniques</li>
+                                <li>Film Analysis</li>
+                            </ul>
+                        </div>
+                        <div class="p-6 bg-gray-50 rounded-lg">
+                            <h3 class="font-bold text-[#046A38] mb-3">Competition</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>Elite Tournaments</li>
+                                <li>Showcase Events</li>
+                                <li>Exhibition Games</li>
+                            </ul>
+                        </div>
+                        <div class="p-6 bg-gray-50 rounded-lg">
+                            <h3 class="font-bold text-[#046A38] mb-3">Development</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>Leadership Training</li>
+                                <li>Sports Psychology</li>
+                                <li>College Preparation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Registration CTA -->
+                <div class="text-center bg-[#174634] rounded-xl p-12">
+                    <h2 class="text-3xl text-white mb-6">Take Your Game to the Elite Level</h2>
+                    <p class="text-gray-300 mb-8">Join the Capital Courts Boys program and develop your full potential.</p>
+                    <div class="flex flex-col md:flex-row justify-center gap-6">
+                        <a href="#" class="bg-[#FFB71C] text-[#174634] px-8 py-3 rounded-full hover:bg-opacity-90 transition inline-flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-basketball"></i>
+                            <span>Apply for Tryouts</span>
+                        </a>
+                        <a href="mailto:capitalcourts@gcba.com" class="text-white hover:text-[#FFB71C] transition inline-flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Contact Program Director</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-[#046A38] text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">GCBA</h3>
+                    <p class="text-sm opacity-80">Building Character Through Sport</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about/visionMission.html" class="hover:text-[#FFB71C] transition cursor-pointer">About Us</a></li>
+                        <li><a href="/volunteers.html" class="hover:text-[#FFB71C] transition cursor-pointer">Volunteers</a></li>
+                        <li><a href="/contactus.html" class="hover:text-[#FFB71C] transition cursor-pointer">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/gcbawolverines/" class="hover:text-[#FFB71C] transition">
+                            <i class="fa-brands fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/GCBAWolverines" class="hover:text-[#FFB71C] transition">
+                            <i class="fa-brands fa-facebook text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <p class="text-sm opacity-80">Orleans, Ontario</p>
+                    <p class="text-sm opacity-80">info@gcba.com</p>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-20 mt-8 pt-8 text-center text-sm opacity-80">
+                <p>&copy; 2025 Gloucester Cumberland Basketball Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!-- Mobile Menu (hidden by default) -->
+<div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+    <div class="bg-white h-full w-4/5 max-w-sm overflow-y-auto transform transition-transform duration-300 translate-x-0">
+        <div class="flex justify-between items-center p-4 border-b">
+            <img src="frontend/images/GCBA-Logo.png" alt="GCBA Logo" class="h-12">
+            <button id="closeMenuBtn" class="text-gray-600">
+                <i class="fa-solid fa-times text-2xl"></i>
+            </button>
+        </div>
+        
+        <nav class="p-4">
+            <!-- Mobile Programs Menu -->
+            <div class="mb-4">
+                <button class="mobile-dropdown-toggle flex justify-between items-center w-full py-2 text-left text-gray-800">
+                    <span>Programs</span>
+                    <i class="fa-solid fa-chevron-down transform transition-transform"></i>
+                </button>
+                <div class="mobile-dropdown-content hidden pl-4 mt-1 space-y-2 border-l-2 border-gray-200">
+                    <a href="/programs/jrNba.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Jr. NBA</a>
+                    <a href="/programs/houseLeague.html" class="block py-2 text-gray-600 hover:text-[#046A38]">House League</a>
+                    <a href="/programs/competitive.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Competitive</a>
+                    <a href="/programs/refereeProgram.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Referee Program</a>
+                    <a href="/programs/selects.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Selects</a>
+                    <a href="/programs/capitalCourtsBoys.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Capital Courts Boys</a>
+                    <a href="/programs/springLeague.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Spring League</a>
+                    <a href="/programs/girlsParkProgram.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Girls' Park Program</a>
+                    <div class="py-2 text-gray-700 font-semibold">Summer Programs</div>
+                    <a href="/programs/summer3v3.html" class="block py-2 pl-2 text-gray-600 hover:text-[#046A38]">3v3</a>
+                    <a href="/programs/summerTraining.html" class="block py-2 pl-2 text-gray-600 hover:text-[#046A38]">Training</a>
+                    <a href="/programs/summerCamps.html" class="block py-2 pl-2 text-gray-600 hover:text-[#046A38]">Camps</a>
+                </div>
+            </div>
+            
+            <!-- Mobile About Us Menu -->
+            <div class="mb-4">
+                <button class="mobile-dropdown-toggle flex justify-between items-center w-full py-2 text-left text-gray-800">
+                    <span>About Us</span>
+                    <i class="fa-solid fa-chevron-down transform transition-transform"></i>
+                </button>
+                <div class="mobile-dropdown-content hidden pl-4 mt-1 space-y-2 border-l-2 border-gray-200">
+                    <a href="/about/visionMission.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Vision & Mission</a>
+                    <a href="/about/clubHistory.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Club History</a>
+                    <a href="/about/executiveDirectors.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Executive & Directors</a>
+                    <a href="/about/policiesProcedures.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Policies & Procedures</a>
+                    <a href="/about/annualGeneralMeeting.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Annual General Meeting</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Resources Menu -->
+            <div class="mb-4">
+                <button class="mobile-dropdown-toggle flex justify-between items-center w-full py-2 text-left text-gray-800">
+                    <span>Resources</span>
+                    <i class="fa-solid fa-chevron-down transform transition-transform"></i>
+                </button>
+                <div class="mobile-dropdown-content hidden pl-4 mt-1 space-y-2 border-l-2 border-gray-200">
+                    <a href="/resources/coachesCorner.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Coaches' Corner</a>
+                    <a href="/resources/competitiveResources.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Competitive Resources</a>
+                    <a href="/resources/houseLeagueResources.html" class="block py-2 text-gray-600 hover:text-[#046A38]">House League Resources</a>
+                </div>
+            </div>
+            
+            <a href="/shop" class="block py-2 text-gray-800 hover:text-[#046A38]">Shop</a>
+            <a href="/volunteers.html" class="block py-2 text-gray-800 hover:text-[#046A38]">Volunteers</a>
+            <a href="/contactus.html" class="block py-2 text-gray-800 hover:text-[#046A38]">Contact Us</a>
+            
+            <div class="mt-6">
+                <a href="#" class="block w-full bg-[#FFB71C] text-[#174634] px-6 py-2 rounded-full font-bold text-center hover:bg-opacity-90 transition">
+                    Register
+                </a>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!-- Add this JavaScript at the end of the body -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const showMoreBtn = document.getElementById('showMorePrograms');
+        const moreArrow = document.getElementById('moreArrow');
+        const additionalPrograms = document.getElementById('additionalPrograms');
+        
+        showMoreBtn.addEventListener('click', function() {
+            // Toggle visibility of additional programs
+            if (additionalPrograms.classList.contains('hidden')) {
+                additionalPrograms.classList.remove('hidden');
+                moreArrow.classList.add('rotate-180');
+                showMoreBtn.querySelector('span').textContent = 'Less Programs';
+            } else {
+                additionalPrograms.classList.add('hidden');
+                moreArrow.classList.remove('rotate-180');
+                showMoreBtn.querySelector('span').textContent = 'More Programs';
+            }
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const closeMenuBtn = document.getElementById('closeMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.remove('hidden');
+            document.body.classList.add('overflow-hidden'); // Prevent scrolling when menu is open
+        });
+        
+        closeMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        });
+        
+        // Close menu if clicking outside content area
+        mobileMenu.addEventListener('click', function(e) {
+            if (e.target === mobileMenu) {
+                mobileMenu.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        });
+        
+        // Mobile Dropdown Toggles
+        const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+        
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                // Toggle dropdown visibility
+                content.classList.toggle('hidden');
+                
+                // Toggle icon rotation
+                if (content.classList.contains('hidden')) {
+                    icon.classList.remove('rotate-180');
+                } else {
+                    icon.classList.add('rotate-180');
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
+          

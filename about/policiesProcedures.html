@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html class="h-full">
+<head>
+    <title>Policies & Procedures - GCBA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        window.FontAwesomeConfig = {
+            autoReplaceSvg: 'nest',
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>
+        * {
+            font-family: "Inter", sans-serif;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .nav-dropdown {
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+        }
+
+        .nav-group:hover .nav-dropdown,
+        .nav-dropdown:hover {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="h-full text-base-content">
+    <div id="root" class="min-h-screen bg-white">
+        <!-- Header -->
+        <header id="header" class="fixed w-full bg-[#046A38] text-white z-50">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between h-20">
+                    <div class="flex items-center">
+                        <a href="/index.html">
+                            <img src="/images/GCBA-Logo.png" alt="GCBA Logo" class="h-16 cursor-pointer">
+                        </a>
+                    </div>
+                    
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden md:flex space-x-6">
+                        <a href="/index.html" class="hover:text-[#FFB71C] transition cursor-pointer">Home</a>
+                        <div class="relative group nav-group">
+                            <span class="hover:text-[#FFB71C] transition cursor-pointer">About Us</span>
+                            <div class="absolute nav-dropdown w-48 bg-white shadow-lg rounded-lg mt-2">
+                                <a href="/about/visionMission.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Vision & Mission</a>
+                                <a href="/about/clubHistory.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Club History</a>
+                                <a href="/about/executiveDirectors.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Executive & Directors</a>
+                                <a href="/about/policiesProcedures.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Policies & Procedures</a>
+                                <a href="/about/annualGeneralMeeting.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Annual General Meeting</a>
+                            </div>
+                        </div>
+                        <div class="relative group nav-group">
+                            <span class="hover:text-[#FFB71C] transition cursor-pointer">Programs</span>
+                            <div class="absolute nav-dropdown w-64 bg-white shadow-lg rounded-lg mt-2">
+                                <a href="/programs/jrNba.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Jr. NBA</a>
+                                <a href="/programs/houseLeague.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">House League</a>
+                                <a href="/programs/competitive.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Competitive</a>
+                                <a href="/programs/refereeProgram.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Referee Program</a>
+                                <a href="/programs/selects.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Selects</a>
+                                <a href="/programs/capitalCourtsBoys.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Capital Courts Boys</a>
+                                <a href="/programs/springLeague.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Spring League</a>
+                                <a href="/programs/girlsParkProgram.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Girls' Park Program</a>
+                                <div class="px-4 py-2 text-gray-600 font-semibold bg-gray-50">Summer Programs</div>
+                                <a href="/programs/summer3v3.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">3v3</a>
+                                <a href="/programs/summerTraining.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">Training</a>
+                                <a href="/programs/summerCamps.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">Camps</a>
+                            </div>
+                        </div>
+                        <div class="relative group nav-group">
+                            <span class="hover:text-[#FFB71C] transition cursor-pointer">Resources</span>
+                            <div class="absolute nav-dropdown w-48 bg-white shadow-lg rounded-lg mt-2">
+                                <a href="/resources/coachesCorner.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Coaches' Corner</a>
+                                <a href="/resources/competitiveResources.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Competitive Resources</a>
+                                <a href="/resources/houseLeagueResources.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">House League Resources</a>
+                            </div>
+                        </div>
+                        <a href="https://gcbawolverines.entripyshops.com/" target="_blank" class="hover:text-[#FFB71C] transition cursor-pointer">Shop</a>
+                        <a href="/volunteers.html" class="hover:text-[#FFB71C] transition cursor-pointer">Volunteers</a>
+                        <a href="/contactus.html" class="hover:text-[#FFB71C] transition cursor-pointer">Contact Us</a>
+                    </nav>
+                    
+                    <a href="https://gcba.powerupsports.com/" target="_blank" class="hidden md:block bg-[#FFB71C] text-[#174634] px-6 py-2 rounded-full font-bold hover:bg-opacity-90 transition">
+                        Register
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="md:hidden text-white">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="pt-32 pb-20">
+            <div class="container mx-auto px-4">
+                <!-- Hero Section -->
+                <div class="text-center mb-16">
+                    <h1 class="text-5xl font-bold text-[#174634] mb-6">
+                        <i class="fa-solid fa-file-lines text-[#FFB71C] mr-2"></i>
+                        Policies & Procedures
+                    </h1>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Guidelines and standards that ensure fair play, safety, and positive experiences for all participants.
+                    </p>
+                </div>
+
+                <!-- Policies Overview -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+                    <h2 class="text-3xl text-[#174634] mb-6">Our Commitment to Safe Sport</h2>
+                    <p class="text-gray-600 mb-6">
+                        GCBA is committed to providing a safe, inclusive, and positive environment for all participants. Our policies are designed to protect the wellbeing of players, coaches, officials, and volunteers while promoting the values of fair play, respect, and sportsmanship.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+                        <!-- Code of Conduct -->
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="flex items-start gap-4">
+                                <div class="text-[#046A38] text-2xl mt-1">
+                                    <i class="fa-solid fa-handshake"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-[#174634] mb-3">Code of Conduct</h3>
+                                    <p class="text-gray-600 mb-4">Guidelines for behavior expected from players, coaches, officials, and spectators.</p>
+                                    <a href="#" class="inline-flex items-center text-[#046A38] hover:text-[#FFB71C] transition">
+                                        <span>View Code of Conduct</span>
+                                        <i class="fa-solid fa-arrow-right ml-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Registration Policy -->
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="flex items-start gap-4">
+                                <div class="text-[#046A38] text-2xl mt-1">
+                                    <i class="fa-solid fa-clipboard-list"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-[#174634] mb-3">Registration Policy</h3>
+                                    <p class="text-gray-600 mb-4">Information on registration procedures, deadlines, fees, and refund policies.</p>
+                                    <a href="#" class="inline-flex items-center text-[#046A38] hover:text-[#FFB71C] transition">
+                                        <span>View Registration Policy</span>
+                                        <i class="fa-solid fa-arrow-right ml-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Safety & Concussion Policy -->
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="flex items-start gap-4">
+                                <div class="text-[#046A38] text-2xl mt-1">
+                                    <i class="fa-solid fa-shield"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-[#174634] mb-3">Safety & Concussion Policy</h3>
+                                    <p class="text-gray-600 mb-4">Protocols for injury prevention, management, and return-to-play guidelines.</p>
+                                    <a href="#" class="inline-flex items-center text-[#046A38] hover:text-[#FFB71C] transition">
+                                        <span>View Safety Policy</span>
+                                        <i class="fa-solid fa-arrow-right ml-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Anti-Harassment Policy -->
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="flex items-start gap-4">
+                                <div class="text-[#046A38] text-2xl mt-1">
+                                    <i class="fa-solid fa-hand-peace"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-[#174634] mb-3">Anti-Harassment Policy</h3>
+                                    <p class="text-gray-600 mb-4">Our commitment to maintaining an environment free from discrimination and harassment.</p>
+                                    <a href="#" class="inline-flex items-center text-[#046A38] hover:text-[#FFB71C] transition">
+                                        <span>View Anti-Harassment Policy</span>
+                                        <i class="fa-solid fa-arrow-right ml-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Team Selection Policy -->
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="flex items-start gap-4">
+                                <div class="text-[#046A38] text-2xl mt-1">
+                                    <i class="fa-solid fa-users"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-[#174634] mb-3">Team Selection Policy</h3>
+                                    <p class="text-gray-600 mb-4">Guidelines for team formation in house league and tryout procedures for competitive teams.</p>
+                                    <a href="#" class="inline-flex items-center text-[#046A38] hover:text-[#FFB71C] transition">
+                                        <span>View Team Selection Policy</span>
+                                        <i class="fa-solid fa-arrow-right ml-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Financial Assistance Policy -->
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="flex items-start gap-4">
+                                <div class="text-[#046A38] text-2xl mt-1">
+                                    <i class="fa-solid fa-hand-holding-heart"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-[#174634] mb-3">Financial Assistance Policy</h3>
+                                    <p class="text-gray-600 mb-4">Information on our subsidy program to ensure basketball is accessible to all families.</p>
+                                    <a href="#" class="inline-flex items-center text-[#046A38] hover:text-[#FFB71C] transition">
+                                        <span>View Financial Assistance Policy</span>
+                                        <i class="fa-solid fa-arrow-right ml-2"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Volunteering & Screening Section -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+                    <h2 class="text-3xl text-[#174634] mb-6">Volunteer Screening & Certification</h2>
+                    <p class="text-gray-600 mb-6">
+                        GCBA is committed to providing a safe environment for all participants. All coaches, assistant coaches, and volunteers who work directly with children are required to complete the following:
+                    </p>
+                    
+                    <ul class="space-y-4 text-gray-600 ml-6 mb-8 list-disc">
+                        <li>Police Record Check (PRC) with Vulnerable Sector Screening</li>
+                        <li>Completion of Respect in Sport for Activity Leaders certification</li>
+                        <li>Signed Code of Conduct agreement</li>
+                        <li>Completion of NCCP FUNdamentals or equivalent coaching certification (for head coaches)</li>
+                        <li>Concussion awareness training</li>
+                    </ul>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <div class="flex items-start gap-4">
+                            <div class="text-[#046A38] text-2xl mt-1">
+                                <i class="fa-solid fa-file-arrow-down"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-[#174634] mb-3">Volunteer Application & Screening Process</h3>
+                                <p class="text-gray-600 mb-4">Complete details on our volunteer application process, required documentation, and screening procedures.</p>
+                                <a href="/volunteers.html" class="inline-flex items-center text-[#046A38] hover:text-[#FFB71C] transition">
+                                    <span>Volunteer Information</span>
+                                    <i class="fa-solid fa-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Questions CTA -->
+                <div class="text-center bg-[#174634] rounded-xl p-12">
+                    <h2 class="text-3xl text-white mb-6">Questions About Our Policies?</h2>
+                    <p class="text-gray-300 mb-8">If you have questions about any of our policies or procedures, please don't hesitate to reach out.</p>
+                    <div class="flex flex-col md:flex-row justify-center gap-6">
+                        <a href="/contactus.html" class="bg-[#FFB71C] text-[#174634] px-8 py-3 rounded-full hover:bg-opacity-90 transition inline-flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Contact Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-[#046A38] text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">GCBA</h3>
+                    <p class="text-sm opacity-80">Building Character Through Sport</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about/visionMission.html" class="hover:text-[#FFB71C] transition cursor-pointer">About Us</a></li>
+                        <li><a href="/volunteers.html" class="hover:text-[#FFB71C] transition cursor-pointer">Volunteers</a></li>
+                        <li><a href="/contactus.html" class="hover:text-[#FFB71C] transition cursor-pointer">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/gcbawolverines/" class="hover:text-[#FFB71C] transition">
+                            <i class="fa-brands fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/GCBAWolverines" class="hover:text-[#FFB71C] transition">
+                            <i class="fa-brands fa-facebook text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <p class="text-sm opacity-80">Orleans, Ontario</p>
+                    <p class="text-sm opacity-80">info@gcba.com</p>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-20 mt-8 pt-8 text-center text-sm opacity-80">
+                <p>&copy; 2025 Gloucester Cumberland Basketball Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+            <!-- Mobile menu content here -->
+        </div>
+
+        <!-- Mobile Menu JavaScript -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+                const closeMenuBtn = document.getElementById('closeMenuBtn');
+                const mobileMenu = document.getElementById('mobileMenu');
+                
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.remove('hidden');
+                    document.body.classList.add('overflow-hidden');
+                });
+                
+                closeMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                    document.body.classList.remove('overflow-hidden');
+                });
+                
+                // Close menu if clicking outside content area
+                mobileMenu.addEventListener('click', function(e) {
+                    if (e.target === mobileMenu) {
+                        mobileMenu.classList.add('hidden');
+                        document.body.classList.remove('overflow-hidden');
+                    }
+                });
+                
+                // Mobile Dropdown Toggles
+                const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+                
+                dropdownToggles.forEach(toggle => {
+                    toggle.addEventListener('click', function() {
+                        const content = this.nextElementSibling;
+                        const icon = this.querySelector('i');
+                        
+                        content.classList.toggle('hidden');
+                        
+                        if (content.classList.contains('hidden')) {
+                            icon.classList.remove('rotate-180');
+                        } else {
+                            icon.classList.add('rotate-180');
+                        }
+                    });
+                });
+            });
+        </script>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="h-full">
+<head>
+    <title>Club History - GCBA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        window.FontAwesomeConfig = {
+            autoReplaceSvg: 'nest',
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>
+        * {
+            font-family: "Inter", sans-serif;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .nav-dropdown {
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+        }
+
+        .nav-group:hover .nav-dropdown,
+        .nav-dropdown:hover {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="h-full text-base-content">
+    <div id="root" class="min-h-screen bg-white">
+        <!-- Header -->
+        <header id="header" class="fixed w-full bg-[#046A38] text-white z-50">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between h-20">
+                    <div class="flex items-center">
+                        <a href="/index.html">
+                            <img src="/images/GCBA-Logo.png" alt="GCBA Logo" class="h-16 cursor-pointer">
+                        </a>
+                    </div>
+                    
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden md:flex space-x-6">
+                        <a href="/index.html" class="hover:text-[#FFB71C] transition cursor-pointer">Home</a>
+                        <div class="relative group nav-group">
+                            <span class="hover:text-[#FFB71C] transition cursor-pointer">About Us</span>
+                            <div class="absolute nav-dropdown w-48 bg-white shadow-lg rounded-lg mt-2">
+                                <a href="/about/visionMission.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Vision & Mission</a>
+                                <a href="/about/clubHistory.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Club History</a>
+                                <a href="/about/executiveDirectors.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Executive & Directors</a>
+                                <a href="/about/policiesProcedures.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Policies & Procedures</a>
+                                <a href="/about/annualGeneralMeeting.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Annual General Meeting</a>
+                            </div>
+                        </div>
+                        <div class="relative group nav-group">
+                            <span class="hover:text-[#FFB71C] transition cursor-pointer">Programs</span>
+                            <div class="absolute nav-dropdown w-64 bg-white shadow-lg rounded-lg mt-2">
+                                <a href="/programs/jrNba.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Jr. NBA</a>
+                                <a href="/programs/houseLeague.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">House League</a>
+                                <a href="/programs/competitive.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Competitive</a>
+                                <a href="/programs/refereeProgram.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Referee Program</a>
+                                <a href="/programs/selects.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Selects</a>
+                                <a href="/programs/capitalCourtsBoys.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Capital Courts Boys</a>
+                                <a href="/programs/springLeague.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Spring League</a>
+                                <a href="/programs/girlsParkProgram.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Girls' Park Program</a>
+                                <div class="px-4 py-2 text-gray-600 font-semibold bg-gray-50">Summer Programs</div>
+                                <a href="/programs/summer3v3.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">3v3</a>
+                                <a href="/programs/summerTraining.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">Training</a>
+                                <a href="/programs/summerCamps.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">Camps</a>
+                            </div>
+                        </div>
+                        <div class="relative group nav-group">
+                            <span class="hover:text-[#FFB71C] transition cursor-pointer">Resources</span>
+                            <div class="absolute nav-dropdown w-48 bg-white shadow-lg rounded-lg mt-2">
+                                <a href="/resources/coachesCorner.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Coaches' Corner</a>
+                                <a href="/resources/competitiveResources.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Competitive Resources</a>
+                                <a href="/resources/houseLeagueResources.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">House League Resources</a>
+                            </div>
+                        </div>
+                        <a href="https://gcbawolverines.entripyshops.com/" target="_blank" class="hover:text-[#FFB71C] transition cursor-pointer">Shop</a>
+                        <a href="/volunteers.html" class="hover:text-[#FFB71C] transition cursor-pointer">Volunteers</a>
+                        <a href="/contactus.html" class="hover:text-[#FFB71C] transition cursor-pointer">Contact Us</a>
+                    </nav>
+                    
+                    <a href="https://gcba.powerupsports.com/" target="_blank" class="hidden md:block bg-[#FFB71C] text-[#174634] px-6 py-2 rounded-full font-bold hover:bg-opacity-90 transition">
+                        Register
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="md:hidden text-white">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="pt-32 pb-20">
+            <div class="container mx-auto px-4">
+                <!-- Hero Section -->
+                <div class="text-center mb-16">
+                    <h1 class="text-5xl font-bold text-[#174634] mb-6">
+                        <i class="fa-solid fa-book-open text-[#FFB71C] mr-2"></i>
+                        Club History
+                    </h1>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Celebrating over 40 years of building community through basketball in Gloucester and Cumberland.
+                    </p>
+                </div>
+
+                <!-- Timeline Section -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+                    <h2 class="text-3xl text-[#174634] mb-8">Our Journey</h2>
+                    
+                    <div class="relative border-l-4 border-[#FFB71C] ml-3 pl-8 pb-6">
+                        <!-- 1981 -->
+                        <div class="mb-12 relative">
+                            <div class="absolute -left-12 bg-[#174634] text-white rounded-full h-8 w-8 flex items-center justify-center">
+                                <i class="fa-solid fa-circle-dot"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-[#174634] mb-2">1981: The Foundation</h3>
+                            <p class="text-gray-600 mb-4">
+                                GCBA was founded as a community basketball organization by a small group of dedicated parents and volunteers. The first season had just 120 players in a small house league program.
+                            </p>
+                        </div>
+                        
+                        <!-- 1990s -->
+                        <div class="mb-12 relative">
+                            <div class="absolute -left-12 bg-[#174634] text-white rounded-full h-8 w-8 flex items-center justify-center">
+                                <i class="fa-solid fa-circle-dot"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-[#174634] mb-2">1990s: Growth & Expansion</h3>
+                            <p class="text-gray-600 mb-4">
+                                The 1990s marked significant growth for the association. Membership doubled, and GCBA introduced its first competitive teams, establishing the Wolverines as a recognized name in Ottawa basketball.
+                            </p>
+                        </div>
+                        
+                        <!-- 2000s -->
+                        <div class="mb-12 relative">
+                            <div class="absolute -left-12 bg-[#174634] text-white rounded-full h-8 w-8 flex items-center justify-center">
+                                <i class="fa-solid fa-circle-dot"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-[#174634] mb-2">2000s: Program Development</h3>
+                            <p class="text-gray-600 mb-4">
+                                GCBA expanded its program offerings to include specialized development opportunities. The referee development program was established, providing training for youth officials. Summer programs were introduced to offer year-round basketball opportunities.
+                            </p>
+                        </div>
+                        
+                        <!-- 2010s -->
+                        <div class="mb-12 relative">
+                            <div class="absolute -left-12 bg-[#174634] text-white rounded-full h-8 w-8 flex items-center justify-center">
+                                <i class="fa-solid fa-circle-dot"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-[#174634] mb-2">2010s: Excellence & Community Focus</h3>
+                            <p class="text-gray-600 mb-4">
+                                The association continued to grow, reaching over 800 players. The Wolverines competitive program achieved provincial recognition with multiple teams competing at the highest levels. Community partnerships were strengthened to enhance access to basketball for all youth.
+                            </p>
+                        </div>
+                        
+                        <!-- Today -->
+                        <div class="relative">
+                            <div class="absolute -left-12 bg-[#174634] text-white rounded-full h-8 w-8 flex items-center justify-center">
+                                <i class="fa-solid fa-circle-dot"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-[#174634] mb-2">Today: A Thriving Basketball Community</h3>
+                            <p class="text-gray-600 mb-4">
+                                GCBA now serves over 1,000 players annually across multiple programs. With a dedicated team of over 200 volunteers, we continue to focus on player development, community engagement, and fostering a love for basketball in the Gloucester-Cumberland region.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Legacy Section -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+                    <h2 class="text-3xl text-[#174634] mb-6">Our Legacy</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="text-center p-6 bg-gray-50 rounded-lg">
+                            <div class="text-5xl font-bold text-[#046A38] mb-2">1,000+</div>
+                            <p class="text-gray-600">Players each season</p>
+                        </div>
+                        <div class="text-center p-6 bg-gray-50 rounded-lg">
+                            <div class="text-5xl font-bold text-[#046A38] mb-2">40+</div>
+                            <p class="text-gray-600">Years of community service</p>
+                        </div>
+                        <div class="text-center p-6 bg-gray-50 rounded-lg">
+                            <div class="text-5xl font-bold text-[#046A38] mb-2">200+</div>
+                            <p class="text-gray-600">Dedicated volunteers</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 text-gray-600">
+                        <p class="mb-4">Over the decades, GCBA has helped thousands of young players develop their basketball skills and character. Many alumni have gone on to play at college and university levels, with some advancing to professional careers. Even more important are the lifelong friendships, values, and community connections that have been formed through participation in GCBA programs.</p>
+                        
+                        <p>As we look to the future, GCBA remains committed to providing quality basketball experiences for all youth in our community, continuing our tradition of excellence, inclusivity, and positive player development.</p>
+                    </div>
+                </div>
+
+                <!-- Join Us CTA -->
+                <div class="text-center bg-[#174634] rounded-xl p-12">
+                    <h2 class="text-3xl text-white mb-6">Be Part of Our Story</h2>
+                    <p class="text-gray-300 mb-8">Join our basketball family and help write the next chapter of GCBA's history.</p>
+                    <div class="flex flex-col md:flex-row justify-center gap-6">
+                        <a href="/programs/houseLeague.html" class="bg-[#FFB71C] text-[#174634] px-8 py-3 rounded-full hover:bg-opacity-90 transition inline-flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-basketball"></i>
+                            <span>Join a Program</span>
+                        </a>
+                        <a href="/volunteers.html" class="text-white hover:text-[#FFB71C] transition inline-flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-hands-helping"></i>
+                            <span>Volunteer with Us</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-[#046A38] text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">GCBA</h3>
+                    <p class="text-sm opacity-80">Building Character Through Sport</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="/about/visionMission.html" class="hover:text-[#FFB71C] transition cursor-pointer">About Us</a></li>
+                        <li><a href="/volunteers.html" class="hover:text-[#FFB71C] transition cursor-pointer">Volunteers</a></li>
+                        <li><a href="/contactus.html" class="hover:text-[#FFB71C] transition cursor-pointer">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/gcbawolverines/" class="hover:text-[#FFB71C] transition">
+                            <i class="fa-brands fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/GCBAWolverines" class="hover:text-[#FFB71C] transition">
+                            <i class="fa-brands fa-facebook text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <p class="text-sm opacity-80">Orleans, Ontario</p>
+                    <p class="text-sm opacity-80">info@gcba.com</p>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-20 mt-8 pt-8 text-center text-sm opacity-80">
+                <p>&copy; 2025 Gloucester Cumberland Basketball Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+</html> 

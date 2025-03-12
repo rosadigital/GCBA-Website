@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="h-full">
+<head>
+    <title>Mike O'Connor Memorial Girls' Tournament - GCBA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        window.FontAwesomeConfig = {
+            autoReplaceSvg: 'nest',
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>
+        * {
+            font-family: "Inter", sans-serif;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="h-full text-base-content">
+    <div id="root" class="min-h-screen bg-white">
+        <!-- Copy header from index.html -->
+
+        <main class="pt-32 pb-20">
+            <div class="container mx-auto px-4">
+                <!-- Hero Section -->
+                <div class="text-center mb-16">
+                    <h1 class="text-5xl font-bold text-[#174634] mb-6">
+                        <i class="fa-solid fa-trophy text-[#FFB71C] mr-2"></i>
+                        Mike O'Connor Memorial Girls' Tournament
+                    </h1>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        A prestigious girls' basketball tournament honoring the legacy of Mike O'Connor and celebrating female athletes.
+                    </p>
+                </div>
+
+                <!-- Tournament Overview -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+                    <div class="flex flex-col md:flex-row gap-8">
+                        <div class="md:w-2/3">
+                            <h2 class="text-3xl text-[#174634] mb-6">Tournament Overview</h2>
+                            <div class="prose text-gray-600">
+                                <p class="mb-4">The Mike O'Connor Memorial Girls' Tournament is GCBA's premier event for female basketball players, bringing together competitive teams from across the region for a weekend of high-level competition, sportsmanship, and community.</p>
+                                
+                                <p class="mb-4">Mike O'Connor was a dedicated coach and advocate for girls' basketball, whose passion and commitment to developing female athletes left an indelible mark on our community. This tournament honors his legacy by providing opportunities for girls to showcase their talents and compete at the highest level.</p>
+                                
+                                <div class="space-y-4 mt-8">
+                                    <div class="flex items-start gap-3">
+                                        <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
+                                        <p>Age Divisions – U12, U14, U16, and U19 girls</p>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
+                                        <p>3-Game Guarantee – Every team plays at least three games</p>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
+                                        <p>Championship Sunday – Exciting playoff format</p>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
+                                        <p>Quality Facilities – Games at premier venues across the city</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/3">
+                            <img class="rounded-xl shadow-lg w-full h-[300px] object-cover" 
+                                 src="/frontend/images/girls-tournament.jpg" 
+                                 alt="Girls basketball team with trophy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tournament Details -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+                    <h2 class="text-2xl text-[#174634] mb-6">Tournament Details</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="font-bold text-[#046A38] mb-4">Event Information</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-regular fa-calendar text-[#FFB71C] mt-1"></i>
+                                    <div>
+                                        <span class="font-medium">Date:</span>
+                                        <span class="block text-gray-600">February 10-12, 2023</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-location-dot text-[#FFB71C] mt-1"></i>
+                                    <div>
+                                        <span class="font-medium">Locations:</span>
+                                        <span class="block text-gray-600">Multiple gymnasiums throughout Gloucester</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-dollar-sign text-[#FFB71C] mt-1"></i>
+                                    <div>
+                                        <span class="font-medium">Entry Fee:</span>
+                                        <span class="block text-gray-600">$450 per team</span>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i class="fa-solid fa-clock text-[#FFB71C] mt-1"></i>
+                                    <div>
+                                        <span class="font-medium">Registration Deadline:</span>
+                                        <span class="block text-gray-600">January 15, 2023</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-[#046A38] mb-4">Divisions</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-basketball text-[#FFB71C]"></i>
+                                    <span>U12 Girls (Tier 1 & 2)</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-basketball text-[#FFB71C]"></i>
+                                    <span>U14 Girls (Tier 1 & 2)</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-basketball text-[#FFB71C]"></i>
+                                    <span>U16 Girls (Tier 1 & 2)</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <i class="fa-solid fa-basketball text-[#FFB71C]"></i>
+                                    <span>U19 Girls (Tier 1 & 2)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tournament Features -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+                    <h2 class="text-2xl text-[#174634] mb-6">Tournament Features</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="p-6 bg-gray-50 rounded-lg">
+                            <h3 class="font-bold text-[#046A38] mb-3">Awards</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>Championship Team Trophy</li>
+                                <li>Finalist Medals</li>
+                                <li>All-Star Selections</li>
+                                <li>MVP Recognition</li>
+                            </ul>
+                        </div>
+                        <div class="p-6 bg-gray-50 rounded-lg">
+                            <h3 class="font-bold text-[#046A38] mb-3">Special Events</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>Skills Competition</li>
+                                <li>Coaches' Reception</li>
+                                <li>College Scout Presence</li>
+                                <li>O'Connor Family Presentation</li>
+                            </ul>
+                        </div>
+                        <div class="p-6 bg-gray-50 rounded-lg">
+                            <h3 class="font-bold text-[#046A38] mb-3">Amenities</h3>
+                            <ul class="space-y-2 text-gray-600">
+                                <li>Professional Referees</li>
+                                <li>Tournament T-shirts</li>
+                                <li>Concession Stands</li>
+                                <li>First Aid Services</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Registration CTA -->
+                <div class="text-center bg-[#174634] rounded-xl p-12">
+                    <h2 class="text-3xl text-white mb-6">Register Your Team Today</h2>
+                    <p class="text-gray-300 mb-8">Don't miss this opportunity to compete in one of the region's premier girls' basketball tournaments.</p>
+                    <div class="flex flex-col md:flex-row justify-center gap-6">
+                        <a href="#" class="bg-[#FFB71C] text-[#174634] px-8 py-3 rounded-full hover:bg-opacity-90 transition inline-flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-trophy"></i>
+                            <span>Register Team</span>
+                        </a>
+                        <a href="mailto:tournament@gcba.com" class="text-white hover:text-[#FFB71C] transition inline-flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Contact Tournament Director</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Copy footer from index.html -->
+    </div>
+</body>
+</html> 
