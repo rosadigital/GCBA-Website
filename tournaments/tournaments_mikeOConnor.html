@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mike O'Connor Memorial Girls' Tournament - GCBA</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         window.FontAwesomeConfig = {
@@ -20,11 +21,89 @@
         ::-webkit-scrollbar {
             display: none;
         }
+        
+        .nav-dropdown {
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+        }
+
+        .nav-group:hover .nav-dropdown,
+        .nav-dropdown:hover {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="h-full text-base-content">
     <div id="root" class="min-h-screen bg-white">
-        <!-- Copy header from index.html -->
+        <!-- Header -->
+        <header id="header" class="fixed w-full bg-[#046A38] text-white z-50">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between h-20">
+                    <div class="flex items-center">
+                        <a href="/index.html">
+                            <img src="/images/GCBA-Logo.png" alt="GCBA Logo" class="h-16 cursor-pointer">
+                        </a>
+                    </div>
+                    
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden md:flex space-x-6">
+                        <a href="/index.html" class="hover:text-[#FFB71C] transition cursor-pointer">Home</a>
+                        <div class="relative group nav-group">
+                            <span class="hover:text-[#FFB71C] transition cursor-pointer">About Us</span>
+                            <div class="absolute nav-dropdown w-48 bg-white shadow-lg rounded-lg mt-2">
+                                <a href="/about/visionMission.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Vision & Mission</a>
+                                <a href="/about/clubHistory.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Club History</a>
+                                <a href="/about/executiveDirectors.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Executive & Directors</a>
+                                <a href="/about/policiesProcedures.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Policies & Procedures</a>
+                                <a href="/about/annualGeneralMeeting.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Annual General Meeting</a>
+                                <a href="/about/alumni.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Alumni</a>
+                            </div>
+                        </div>
+                        <div class="relative group nav-group">
+                            <span class="hover:text-[#FFB71C] transition cursor-pointer">Programs</span>
+                            <div class="absolute nav-dropdown w-64 bg-white shadow-lg rounded-lg mt-2">
+                                <a href="/programs/jrNba.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Jr. NBA</a>
+                                <a href="/programs/houseLeague.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">House League</a>
+                                <a href="/programs/competitive.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Competitive</a>
+                                <a href="/programs/refereeProgram.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Referee Program</a>
+                                <a href="/programs/selects.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Selects</a>
+                                <a href="/programs/capitalCourtsBoys.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Capital Courts Boys</a>
+                                <a href="/programs/springLeague.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Spring League</a>
+                                <a href="/programs/girlsParkProgram.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Girls' Park Program</a>
+                                <div class="px-4 py-2 text-gray-600 font-semibold bg-gray-50">Summer Programs</div>
+                                <a href="/programs/summer3v3.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">3v3</a>
+                                <a href="/programs/summerTraining.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">Training</a>
+                                <a href="/programs/summerCamps.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">Camps</a>
+                            </div>
+                        </div>
+                        <div class="relative group nav-group">
+                            <span class="hover:text-[#FFB71C] transition cursor-pointer">Resources</span>
+                            <div class="absolute nav-dropdown w-48 bg-white shadow-lg rounded-lg mt-2">
+                                <a href="/resources/coachesCorner.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Coaches' Corner</a>
+                                <a href="/resources/competitiveResources.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Competitive Resources</a>
+                                <a href="/resources/houseLeagueResources.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">House League Resources</a>
+                            </div>
+                        </div>
+                        <a href="https://gcbawolverines.entripyshops.com/" target="_blank" class="hover:text-[#FFB71C] transition cursor-pointer">Shop</a>
+                        <a href="/volunteers.html" class="hover:text-[#FFB71C] transition cursor-pointer">Volunteers</a>
+                        <a href="/contactus.html" class="hover:text-[#FFB71C] transition cursor-pointer">Contact Us</a>
+                    </nav>
+                    
+                    <a href="https://gcba.powerupsports.com/" target="_blank" class="hidden md:block bg-[#FFB71C] text-[#174634] px-6 py-2 rounded-full font-bold hover:bg-opacity-90 transition">
+                        Register
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="md:hidden text-white">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
 
         <main class="pt-32 pb-20">
             <div class="container mx-auto px-4">
@@ -275,6 +354,7 @@
                     <a href="/about/executiveDirectors.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Executive & Directors</a>
                     <a href="/about/policiesProcedures.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Policies & Procedures</a>
                     <a href="/about/annualGeneralMeeting.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Annual General Meeting</a>
+                    <a href="/about/alumni.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Alumni</a>
                 </div>
             </div>
             

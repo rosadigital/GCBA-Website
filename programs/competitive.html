@@ -4,110 +4,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Competitive Program - GCBA</title>
-    <!DOCTYPE html>
-    <html class="h-full">
-    <head>
-        <title>Volunteer with GCBA</title>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-            window.FontAwesomeConfig = {
-                autoReplaceSvg: 'nest',
-            };
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        window.FontAwesomeConfig = {
+            autoReplaceSvg: 'nest',
+        };
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>
+        * {
+            font-family: "Inter", sans-serif;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
         
-        <style>
-            * {
-                font-family: "Inter", sans-serif;
-            }
-            ::-webkit-scrollbar {
-                display: none;
-            }
-            
-            .nav-dropdown {
-                visibility: hidden;
-                opacity: 0;
-                transform: translateY(-10px);
-                transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
-            }
-    
-            .nav-group:hover .nav-dropdown,
-            .nav-dropdown:hover {
-                visibility: visible;
-                opacity: 1;
-                transform: translateY(0);
-            }
-        </style>
-    </head>
-    <body class="h-full text-base-content">
-        <div id="root" class="min-h-screen bg-white">
-            <!-- Header -->
-            <header id="header" class="fixed w-full bg-[#046A38] text-white z-50">
-                <div class="container mx-auto px-4">
-                    <div class="flex items-center justify-between h-20">
-                        <div class="flex items-center">
-                            <a href="/index.html">
-                                <img src="/images/GCBA-Logo.png" alt="GCBA Logo" class="h-16 cursor-pointer">
-                            </a>
-                        </div>
-                        
-                        <!-- Desktop Navigation -->
-                        <nav class="hidden md:flex space-x-6">
-                            <a href="/index.html" class="hover:text-[#FFB71C] transition cursor-pointer">Home</a>
-                            <div class="relative group nav-group">
-                                <span class="hover:text-[#FFB71C] transition cursor-pointer">About Us</span>
-                                <div class="absolute nav-dropdown w-48 bg-white shadow-lg rounded-lg mt-2">
-                                    <a href="/about/visionMission.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Vision & Mission</a>
-                                    <a href="/about/clubHistory.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Club History</a>
-                                    <a href="/about/executiveDirectors.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Executive & Directors</a>
-                                    <a href="/about/policiesProcedures.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Policies & Procedures</a>
-                                    <a href="/about/annualGeneralMeeting.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Annual General Meeting</a>
-                                </div>
-                            </div>
-                            <div class="relative group nav-group">
-                                <span class="hover:text-[#FFB71C] transition cursor-pointer">Programs</span>
-                                <div class="absolute nav-dropdown w-64 bg-white shadow-lg rounded-lg mt-2">
-                                    <a href="/programs/jrNba.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Jr. NBA</a>
-                                    <a href="/programs/houseLeague.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">House League</a>
-                                    <a href="/programs/competitive.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Competitive</a>
-                                    <a href="/programs/refereeProgram.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Referee Program</a>
-                                    <a href="/programs/selects.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Selects</a>
-                                    <a href="/programs/capitalCourtsBoys.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Capital Courts Boys</a>
-                                    <a href="/programs/springLeague.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Spring League</a>
-                                    <a href="/programs/girlsParkProgram.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Girls' Park Program</a>
-                                    <div class="px-4 py-2 text-gray-600 font-semibold bg-gray-50">Summer Programs</div>
-                                    <a href="/programs/summer3v3.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">3v3</a>
-                                    <a href="/programs/summerTraining.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">Training</a>
-                                    <a href="/programs/summerCamps.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">Camps</a>
-                                </div>
-                            </div>
-                            <div class="relative group nav-group">
-                                <span class="hover:text-[#FFB71C] transition cursor-pointer">Resources</span>
-                                <div class="absolute nav-dropdown w-48 bg-white shadow-lg rounded-lg mt-2">
-                                    <a href="/resources/coachesCorner.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Coaches' Corner</a>
-                                    <a href="/resources/competitiveResources.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Competitive Resources</a>
-                                    <a href="/resources/houseLeagueResources.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">House League Resources</a>
-                                </div>
-                            </div>
-                            <a href="https://gcbawolverines.entripyshops.com/" target="_blank" class="hover:text-[#FFB71C] transition cursor-pointer">Shop</a>
-                            <a href="/volunteers.html" class="hover:text-[#FFB71C] transition cursor-pointer">Volunteers</a>
-                            <a href="/contactus.html" class="hover:text-[#FFB71C] transition cursor-pointer">Contact Us</a>
-                        </nav>
-                        
-                        <a href="https://gcba.powerupsports.com/" target="_blank" class="hidden md:block bg-[#FFB71C] text-[#174634] px-6 py-2 rounded-full font-bold hover:bg-opacity-90 transition">
-                            Register
+        .nav-dropdown {
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+        }
+
+        .nav-group:hover .nav-dropdown,
+        .nav-dropdown:hover {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="h-full text-base-content">
+    <div id="root" class="min-h-screen bg-white">
+        <!-- Header -->
+        <header id="header" class="fixed w-full bg-[#046A38] text-white z-50">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between h-20">
+                    <div class="flex items-center">
+                        <a href="/index.html">
+                            <img src="/images/GCBA-Logo.png" alt="GCBA Logo" class="h-16 cursor-pointer">
                         </a>
-                        
-                        <!-- Mobile Menu Button -->
-                        <button id="mobileMenuBtn" class="md:hidden text-white">
-                            <i class="fa-solid fa-bars text-2xl"></i>
-                        </button>
                     </div>
+                    
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden md:flex space-x-6">
+                        <a href="/index.html" class="hover:text-[#FFB71C] transition cursor-pointer">Home</a>
+                        <div class="relative group nav-group">
+                            <span class="hover:text-[#FFB71C] transition cursor-pointer">About Us</span>
+                            <div class="absolute nav-dropdown w-48 bg-white shadow-lg rounded-lg mt-2">
+                                <a href="/about/visionMission.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Vision & Mission</a>
+                                <a href="/about/clubHistory.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Club History</a>
+                                <a href="/about/executiveDirectors.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Executive & Directors</a>
+                                <a href="/about/policiesProcedures.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Policies & Procedures</a>
+                                <a href="/about/annualGeneralMeeting.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Annual General Meeting</a>
+                                <a href="/about/alumni.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Alumni</a>
+                            </div>
+                        </div>
+                        <div class="relative group nav-group">
+                            <span class="hover:text-[#FFB71C] transition cursor-pointer">Programs</span>
+                            <div class="absolute nav-dropdown w-64 bg-white shadow-lg rounded-lg mt-2">
+                                <a href="/programs/jrNba.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Jr. NBA</a>
+                                <a href="/programs/houseLeague.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">House League</a>
+                                <a href="/programs/competitive.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Competitive</a>
+                                <a href="/programs/refereeProgram.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Referee Program</a>
+                                <a href="/programs/selects.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Selects</a>
+                                <a href="/programs/capitalCourtsBoys.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Capital Courts Boys</a>
+                                <a href="/programs/springLeague.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Spring League</a>
+                                <a href="/programs/girlsParkProgram.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Girls' Park Program</a>
+                                <div class="px-4 py-2 text-gray-600 font-semibold bg-gray-50">Summer Programs</div>
+                                <a href="/programs/summer3v3.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">3v3</a>
+                                <a href="/programs/summerTraining.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">Training</a>
+                                <a href="/programs/summerCamps.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white pl-8">Camps</a>
+                            </div>
+                        </div>
+                        <div class="relative group nav-group">
+                            <span class="hover:text-[#FFB71C] transition cursor-pointer">Resources</span>
+                            <div class="absolute nav-dropdown w-48 bg-white shadow-lg rounded-lg mt-2">
+                                <a href="/resources/coachesCorner.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Coaches' Corner</a>
+                                <a href="/resources/competitiveResources.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">Competitive Resources</a>
+                                <a href="/resources/houseLeagueResources.html" class="block px-4 py-2 text-gray-800 hover:bg-[#046A38] hover:text-white">House League Resources</a>
+                            </div>
+                        </div>
+                        <a href="https://gcbawolverines.entripyshops.com/" target="_blank" class="hover:text-[#FFB71C] transition cursor-pointer">Shop</a>
+                        <a href="/volunteers.html" class="hover:text-[#FFB71C] transition cursor-pointer">Volunteers</a>
+                        <a href="/contactus.html" class="hover:text-[#FFB71C] transition cursor-pointer">Contact Us</a>
+                    </nav>
+                    
+                    <a href="https://gcba.powerupsports.com/" target="_blank" class="hidden md:block bg-[#FFB71C] text-[#174634] px-6 py-2 rounded-full font-bold hover:bg-opacity-90 transition">
+                        Register
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="md:hidden text-white">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
                 </div>
-            </header>
-    
+            </div>
+        </header>
 
         <main class="pt-32 pb-20">
             <div class="container mx-auto px-4">
@@ -118,184 +114,305 @@
                         Competitive Program
                     </h1>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Elite-level basketball program for dedicated athletes seeking high-level competition and advanced skill development.
+                        Elite-level basketball for dedicated players looking to advance their skills and compete at higher levels across the province.
                     </p>
                 </div>
 
                 <!-- Program Overview -->
                 <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+                    <h2 class="text-3xl text-[#174634] mb-6">Program Overview</h2>
                     <div class="flex flex-col md:flex-row gap-8">
                         <div class="md:w-2/3">
-                            <h2 class="text-3xl text-[#174634] mb-6">Program Overview</h2>
-                            <div class="prose text-gray-600">
-                                <p class="mb-4">The GCBA Competitive Program offers serious basketball players the opportunity to compete at the highest level. Our teams participate in the Ontario Basketball Association (OBA) league and various elite tournaments.</p>
-                                
-                                <div class="space-y-4 mt-8">
-                                    <div class="flex items-start gap-3">
-                                        <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
-                                        <p>Advanced Skill Development – Professional coaching and training</p>
-                                    </div>
-                                    <div class="flex items-start gap-3">
-                                        <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
-                                        <p>High-Level Competition – OBA league games and tournaments</p>
-                                    </div>
-                                    <div class="flex items-start gap-3">
-                                        <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
-                                        <p>Team Strategy – Advanced offensive and defensive systems</p>
-                                    </div>
-                                    <div class="flex items-start gap-3">
-                                        <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
-                                        <p>Player Development – Individual and team-based training</p>
-                                    </div>
-                                </div>
+                            <p class="text-gray-600 mb-4">
+                                The GCBA Wolverines Competitive Program represents our elite-level basketball offering, providing advanced training and high-level competition for dedicated players. Our teams compete in the Ontario Basketball Association (OBA) leagues and tournaments throughout the province.
+                            </p>
+                            <p class="text-gray-600 mb-4">
+                                This challenging program focuses on developing well-rounded players through intensive skill training, strategic team play, and competitive games against top-tier opponents. Players receive coaching from experienced, NCCP-certified staff committed to maximizing athletes' potential.
+                            </p>
+                            <div class="bg-gray-50 p-6 rounded-lg my-6">
+                                <h3 class="text-lg font-bold text-[#174634] mb-3">Program Highlights</h3>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-check-circle text-[#046A38] mt-1"></i>
+                                        <span class="text-gray-600">Ontario Basketball Association (OBA) league participation</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-check-circle text-[#046A38] mt-1"></i>
+                                        <span class="text-gray-600">Multiple practices per week led by certified coaches</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-check-circle text-[#046A38] mt-1"></i>
+                                        <span class="text-gray-600">Tournament participation across Ontario</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-check-circle text-[#046A38] mt-1"></i>
+                                        <span class="text-gray-600">Advanced skill development through specialized training</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <div class="md:w-1/3">
-                            <img class="rounded-xl shadow-lg w-full h-[300px] object-cover" 
-                                 src="/images/competitive.png" 
-                                 alt="GCBA competitive basketball players in action">
+                            <div class="bg-[#174634] text-white rounded-lg p-6">
+                                <h3 class="text-xl font-bold mb-4">Quick Details</h3>
+                                <ul class="space-y-3">
+                                    <li class="flex items-center gap-3">
+                                        <i class="fa-solid fa-user-group text-[#FFB71C]"></i>
+                                        <div>
+                                            <span class="font-medium">Ages</span>
+                                            <p class="text-gray-300 text-sm">U10 - U19 Boys & Girls</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i class="fa-solid fa-calendar-days text-[#FFB71C]"></i>
+                                        <div>
+                                            <span class="font-medium">Season</span>
+                                            <p class="text-gray-300 text-sm">September - April</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i class="fa-solid fa-location-dot text-[#FFB71C]"></i>
+                                        <div>
+                                            <span class="font-medium">Locations</span>
+                                            <p class="text-gray-300 text-sm">Various school gyms across Ottawa</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-center gap-3">
+                                        <i class="fa-solid fa-dollar-sign text-[#FFB71C]"></i>
+                                        <div>
+                                            <span class="font-medium">Program Fees</span>
+                                            <p class="text-gray-300 text-sm">$1,000-$1,400 per season</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tryout Information -->
+                <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+                    <h2 class="text-3xl text-[#174634] mb-6">Tryout Information</h2>
+                    <p class="text-gray-600 mb-6">
+                        Tryouts for the 2024-2025 Competitive season will be held in September. All players must pre-register for tryouts and attend both sessions for their age group to be considered for team selection.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-[#174634] mb-4">Girls Tryout Dates</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-calendar-day text-[#046A38] mt-1"></i>
+                                    <div>
+                                        <span class="font-medium">U10 & U11 Girls</span>
+                                        <p class="text-gray-600">September 14-15, 2024</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-calendar-day text-[#046A38] mt-1"></i>
+                                    <div>
+                                        <span class="font-medium">U12 & U13 Girls</span>
+                                        <p class="text-gray-600">September 14-15, 2024</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-calendar-day text-[#046A38] mt-1"></i>
+                                    <div>
+                                        <span class="font-medium">U14 & U15 Girls</span>
+                                        <p class="text-gray-600">September 21-22, 2024</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-calendar-day text-[#046A38] mt-1"></i>
+                                    <div>
+                                        <span class="font-medium">U16-U19 Girls</span>
+                                        <p class="text-gray-600">September 21-22, 2024</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-bold text-[#174634] mb-4">Boys Tryout Dates</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-calendar-day text-[#046A38] mt-1"></i>
+                                    <div>
+                                        <span class="font-medium">U10 & U11 Boys</span>
+                                        <p class="text-gray-600">September 7-8, 2024</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-calendar-day text-[#046A38] mt-1"></i>
+                                    <div>
+                                        <span class="font-medium">U12 & U13 Boys</span>
+                                        <p class="text-gray-600">September 7-8, 2024</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-calendar-day text-[#046A38] mt-1"></i>
+                                    <div>
+                                        <span class="font-medium">U14 & U15 Boys</span>
+                                        <p class="text-gray-600">September 28-29, 2024</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-calendar-day text-[#046A38] mt-1"></i>
+                                    <div>
+                                        <span class="font-medium">U16-U19 Boys</span>
+                                        <p class="text-gray-600">September 28-29, 2024</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="text-center mt-8">
+                                <a href="https://gcba.powerupsports.com/" target="_blank" class="bg-[#FFB71C] text-[#174634] px-6 py-2 rounded-full font-bold hover:bg-opacity-90 transition inline-flex items-center">
+                                    <i class="fa-solid fa-pen-to-square mr-2"></i>
+                                    <span>Pre-Register for Tryouts</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Program Details -->
                 <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
-                    <h2 class="text-2xl text-[#174634] mb-6">Program Details</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div>
-                            <h3 class="font-bold text-[#046A38] mb-4">Season Commitment</h3>
-                            <ul class="space-y-4">
-                                <li class="flex items-center gap-3">
-                                    <i class="fa-regular fa-calendar text-[#FFB71C]"></i>
-                                    <span>September to April (Regular Season)</span>
+                    <h2 class="text-3xl text-[#174634] mb-6">Program Details</h2>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-[#174634] mb-4">Coaching & Development</h3>
+                        <p class="text-gray-600 mb-4">
+                            All GCBA Wolverines teams are led by NCCP certified coaches with extensive basketball knowledge and coaching experience. Our coaching philosophy emphasizes skill development, tactical team play, and character building.
+                        </p>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h4 class="font-bold text-[#174634] mb-3">Development Focus Areas</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div class="flex items-start gap-2">
+                                    <i class="fa-solid fa-basketball text-[#046A38] mt-1"></i>
+                                    <span class="text-gray-600">Advanced individual skills</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <i class="fa-solid fa-users text-[#046A38] mt-1"></i>
+                                    <span class="text-gray-600">Tactical team play</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <i class="fa-solid fa-running text-[#046A38] mt-1"></i>
+                                    <span class="text-gray-600">Athletic development</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <i class="fa-solid fa-brain text-[#046A38] mt-1"></i>
+                                    <span class="text-gray-600">Basketball IQ</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <i class="fa-solid fa-heart text-[#046A38] mt-1"></i>
+                                    <span class="text-gray-600">Mental toughness</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <i class="fa-solid fa-medal text-[#046A38] mt-1"></i>
+                                    <span class="text-gray-600">Competitive mindset</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold text-[#174634] mb-4">Season Structure</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-gray-50 p-6 rounded-lg">
+                                <h4 class="font-bold text-[#174634] mb-3">Training</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
+                                        <span class="text-gray-600">2-3 team practices per week</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
+                                        <span class="text-gray-600">Position-specific skills sessions</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
+                                        <span class="text-gray-600">Strength & conditioning programs</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-6 rounded-lg">
+                                <h4 class="font-bold text-[#174634] mb-3">Competition</h4>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
+                                        <span class="text-gray-600">6-8 tournaments per season</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
+                                        <span class="text-gray-600">Ontario Basketball regular season games</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
+                                        <span class="text-gray-600">Ontario Cup Championships participation</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-[#174634] mb-4">Program Fees</h3>
+                        <p class="text-gray-600 mb-4">
+                            Competitive program fees range from $1,000-$1,400 per season, depending on the age division. Fees cover:
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
+                                    <span class="text-gray-600">Coaching and training fees</span>
                                 </li>
-                                <li class="flex items-center gap-3">
-                                    <i class="fa-solid fa-clock text-[#FFB71C]"></i>
-                                    <span>2-3 Practices per Week</span>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
+                                    <span class="text-gray-600">Ontario Basketball registration</span>
                                 </li>
-                                <li class="flex items-center gap-3">
-                                    <i class="fa-solid fa-basketball text-[#FFB71C]"></i>
-                                    <span>Weekend Games & Tournaments</span>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
+                                    <span class="text-gray-600">Insurance coverage</span>
+                                </li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
+                                    <span class="text-gray-600">Home tournament entry fees</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
+                                    <span class="text-gray-600">Uniform package</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-[#046A38] mt-1"></i>
+                                    <span class="text-gray-600">Administrative costs</span>
                                 </li>
                             </ul>
                         </div>
-                        <div>
-                            <h3 class="font-bold text-[#046A38] mb-4">Requirements</h3>
-                            <ul class="space-y-4">
-                                <li class="flex items-center gap-3">
-                                    <i class="fa-solid fa-check text-[#FFB71C]"></i>
-                                    <span>Tryout Selection Process</span>
-                                </li>
-                                <li class="flex items-center gap-3">
-                                    <i class="fa-solid fa-check text-[#FFB71C]"></i>
-                                    <span>Full Season Commitment</span>
-                                </li>
-                                <li class="flex items-center gap-3">
-                                    <i class="fa-solid fa-check text-[#FFB71C]"></i>
-                                    <span>Travel Requirements</span>
-                                </li>
-                            </ul>
-                        </div>
+                        <p class="text-gray-600 mt-4 italic">
+                            Note: Additional fees for away tournaments and Ontario Cup Championships will be collected separately.
+                        </p>
                     </div>
                 </div>
 
-                <!-- Age Divisions -->
-                <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
-                    <h2 class="text-2xl text-[#174634] mb-6">Age Divisions</h2>
-                    <div class="overflow-x-auto">
-                        <table class="w-full">
-                            <thead class="bg-[#174634] text-white">
-                                <tr>
-                                    <th class="px-6 py-3 text-left">Division</th>
-                                    <th class="px-6 py-3 text-left">Age Group</th>
-                                    <th class="px-6 py-3 text-left">Level</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-gray-200">
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-6 py-4">U13</td>
-                                    <td class="px-6 py-4">Ages 11-12</td>
-                                    <td class="px-6 py-4">Division 1</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-6 py-4">U15</td>
-                                    <td class="px-6 py-4">Ages 13-14</td>
-                                    <td class="px-6 py-4">Division 1</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-6 py-4">U17</td>
-                                    <td class="px-6 py-4">Ages 15-16</td>
-                                    <td class="px-6 py-4">Division 1</td>
-                                </tr>
-                                <tr class="hover:bg-gray-50">
-                                    <td class="px-6 py-4">U19</td>
-                                    <td class="px-6 py-4">Ages 17-18</td>
-                                    <td class="px-6 py-4">Division 1</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <!-- Tryout Information -->
-                <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
-                    <h2 class="text-2xl text-[#174634] mb-6">Tryout Information</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div>
-                            <h3 class="font-bold text-[#046A38] mb-4">What to Expect</h3>
-                            <ul class="space-y-3">
-                                <li class="flex items-start gap-3">
-                                    <i class="fa-solid fa-check text-[#FFB71C] mt-1"></i>
-                                    <span>Skills Assessment</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i class="fa-solid fa-check text-[#FFB71C] mt-1"></i>
-                                    <span>Scrimmage Evaluation</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i class="fa-solid fa-check text-[#FFB71C] mt-1"></i>
-                                    <span>Physical Testing</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-[#046A38] mb-4">Required Items</h3>
-                            <ul class="space-y-3">
-                                <li class="flex items-start gap-3">
-                                    <i class="fa-solid fa-check text-[#FFB71C] mt-1"></i>
-                                    <span>Basketball Attire</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i class="fa-solid fa-check text-[#FFB71C] mt-1"></i>
-                                    <span>Water Bottle</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i class="fa-solid fa-check text-[#FFB71C] mt-1"></i>
-                                    <span>Registration Form</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Registration CTA -->
+                <!-- CTA Section -->
                 <div class="text-center bg-[#174634] rounded-xl p-12">
-                    <h2 class="text-3xl text-white mb-6">Ready to Compete at the Highest Level?</h2>
-                    <p class="text-gray-300 mb-8">Join our competitive program and take your game to the next level.</p>
+                    <h2 class="text-3xl text-white mb-6">Ready to Compete at a Higher Level?</h2>
+                    <p class="text-gray-300 mb-8">Join the GCBA Wolverines and develop your skills with our elite competitive program.</p>
                     <div class="flex flex-col md:flex-row justify-center gap-6">
-                        <a href="#" class="bg-[#FFB71C] text-[#174634] px-8 py-3 rounded-full hover:bg-opacity-90 transition inline-flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-basketball"></i>
+                        <a href="https://gcba.powerupsports.com/" target="_blank" class="bg-[#FFB71C] text-[#174634] px-8 py-3 rounded-full hover:bg-opacity-90 transition inline-flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-file-signature"></i>
                             <span>Register for Tryouts</span>
                         </a>
-                        <a href="mailto:competitive@gcba.com" class="text-white hover:text-[#FFB71C] transition inline-flex items-center justify-center gap-2">
+                        <a href="/contactus.html" class="text-white hover:text-[#FFB71C] transition inline-flex items-center justify-center gap-2">
                             <i class="fa-solid fa-envelope"></i>
-                            <span>Contact Program Director</span>
+                            <span>Contact Our Competitive Director</span>
                         </a>
                     </div>
                 </div>
             </div>
         </main>
-    
+
         <!-- Footer -->
         <footer id="footer" class="bg-[#046A38] text-white py-12">
             <div class="container mx-auto px-4">
@@ -381,6 +498,7 @@
                         <a href="/about/executiveDirectors.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Executive & Directors</a>
                         <a href="/about/policiesProcedures.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Policies & Procedures</a>
                         <a href="/about/annualGeneralMeeting.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Annual General Meeting</a>
+                        <a href="/about/alumni.html" class="block py-2 text-gray-600 hover:text-[#046A38]">Alumni</a>
                     </div>
                 </div>
                 
@@ -471,6 +589,6 @@
         });
     });
     </script>
-    </body>
-    </html>
+</body>
+</html>
               
